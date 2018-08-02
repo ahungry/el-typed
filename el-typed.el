@@ -53,6 +53,12 @@
 (typep 2 'even-number)                  ; t
 (typep 2 'odd-number)                   ; nil
 
+(defun ++ (a b)
+  (cl-typecase a
+    (string (format "%s%s" a b))
+    (integer (+ a b))
+    (t (error "Woops"))))
+
 (defun n-dispatch (n)
   (cl-typecase n
     (number-list (message "Nice list of numbers"))
