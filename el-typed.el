@@ -55,6 +55,7 @@
 
 (defun ++ (a b)
   (cl-typecase a
+    (el-typed-class (+ b (oref a foo)))
     (string (format "%s%s" a b))
     (integer (+ a b))
     (t (error "Woops"))))
