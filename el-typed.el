@@ -1,3 +1,5 @@
+;;; el-typed.el --- The typing stuff I'm messing with.
+
 ;; Provides useful typing information in how we write Elisp, to make it more readable.
 
 (defmacro defn (types name args &rest rest)
